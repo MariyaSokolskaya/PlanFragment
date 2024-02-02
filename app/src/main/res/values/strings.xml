@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PlanFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text">Планировщик задач</string>
+    <string name="cur_text">Текущие задачи</string>
+    <string name="compl_text">Завершенные задачи</string>
+    <string name="add_text">Внесите задачу</string>
+    <string name="add_text_button">Добавить задачу в список</string>
+</resources>
