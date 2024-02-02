@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,11 +58,25 @@ public class CurrentTasksFragment extends Fragment {
         }
     }
 
+    Button addTaskButton;
+    EditText taskText;
+    TextView listTasks;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_current_tasks, container, false);
+        addTaskButton = view.findViewById(R.id.add_cur_button);
+        taskText = view.findViewById(R.id.add_cur_task);
+        listTasks = view.findViewById(R.id.curr_task_list);
+
+        addTaskButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s = taskText.getText().toString();
+                listTasks.append(s + "\n");
+            }
+        });
         return view;
     }
 }
